@@ -1,0 +1,17 @@
+////////////// Media queries ///////////////////////
+//Default			= 980px and up
+//Portrait tablets 	= 768px and above
+//Phones to tablets	= 767px and below
+//Phones			= 480px and below
+
+@mixin respond-to($media) {
+  @if $media == handhelds {
+    @media only screen and (max-width: 767px) { @content; }
+  }
+  @else if $media == tablets {
+    @media only screen and (min-width: 768px) and (max-width: 979px) { @content; }
+  }
+  @else if $media == wide-screens {
+    @media only screen and (min-width: 980px) { @content; }
+  }
+}

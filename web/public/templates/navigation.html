@@ -1,0 +1,21 @@
+<div class="navbar navbar-default navbar-static-top" >
+	<img class="application-logo" src="images/logo3.png"/>
+
+    <div>
+      <button class="navbar-toggle"  ng-click="toggleNavigation()" >
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <label class="page-title">{{pageTitle}}</label>
+
+      <div class="navigation-elements" ng-class="{'hide-navigation': !showNavigation}">
+        <ul class="nav navbar-nav">
+			<li  ng-repeat="menuItem in menuItems" ng-class="{ active: isActive(menuItem)}" >
+				<a ng-click="navigationChanged(menuItem)" href="#{{menuItem.name}}">{{menuItem.label}}</a>
+			</li>
+        </ul>
+
+      </div>
+    </div>
+</div>	

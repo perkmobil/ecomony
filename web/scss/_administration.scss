@@ -1,0 +1,146 @@
+/**********************
+ *** ADMINISTRATION ***
+ **********************/
+$entry-list-width: 300px;
+$entry-list-width-mini: 90px;
+ 
+ 
+ 
+ /*
+ * List styling
+ */
+ 
+ .entry-list {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 1000;
+    display: block;
+    padding: 70px 20px 20px;
+	background-color: rgba(249, 249, 249, 0.4) !important;
+	border: 0 !important;
+	width: $entry-list-width;
+	.list {
+		list-style-type: none;
+		padding: 0;
+	}
+	@include respond-to(handhelds) {
+		width: $entry-list-width-mini;
+	}
+}
+
+.listitem {
+	height: 50;
+	margin-bottom: 0.5em;
+	cursor:pointer;
+	
+	&:hover {
+		background-color: rgba(255, 255, 255, 0.5);
+	}
+	
+	.listitem-logo {
+		height: 50;
+		float: left;
+	}
+
+	.listitem-header {
+		font-weight: bold;
+		font-size: large;
+		padding-left: 10px;
+		color: #223745;
+		overflow: hidden;
+		white-space: nowrap;
+		display: block;
+		@include respond-to(handhelds) {
+			display: none;
+		}
+	}
+
+	.listitem-text {
+		padding-left: 10px;
+		overflow: hidden;
+		white-space: nowrap;
+		display: block;
+		@include respond-to(handhelds) {
+			display: none;
+		}
+	}
+}
+
+
+
+/*
+ * Details styling
+ */
+ 
+ .entry-details {
+ 
+ 	right: 0;
+	left: $entry-list-width;
+	@include respond-to(handhelds) {
+		left: $entry-list-width-mini;
+	}
+	margin: 0em 1em;
+	position: absolute;
+	padding: 3em;
+	background-color: rgba(249, 249, 249, 0.8) !important;
+}
+ 
+.details-logo {
+	height: 4em;
+	float: left;
+	position: absolute;
+}
+.description-input {
+	width: 50%;
+	zoom: 1.7;
+	color: #A6011E;
+	margin-left: 3em;
+	margin-bottom: 1em;
+}
+
+.type-dropdown {
+	position: absolute;
+	
+	ul li {
+		cursor: pointer;
+		img {
+			height: 3.3em;
+			margin: 0.2em 0.4em;
+		}
+		span {
+			cursor:pointer;
+			font-size: large;
+		}	
+	}
+	button {
+		float: left;
+		padding: 0;
+		img {
+			height: 4em;
+		}
+	}
+}
+
+.entry-delete-button {
+	background: transparent;
+	border: 0;
+	top: 5px;
+	right: 40px;
+	position: absolute;
+	zoom: 1.5;
+}
+
+.entry-save-button {
+	background: transparent;
+	border: 0;
+	top: 5px;
+	right: 5px;
+	position: absolute;
+	zoom: 1.5;
+}
+
+.frequency-dropdown {
+	-webkit-appearance: none;
+}

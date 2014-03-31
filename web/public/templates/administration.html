@@ -1,0 +1,43 @@
+<div class="row">
+	<div class="entry-list">
+		<ul class="list">
+            <li class="listitem" ng:repeat="entry in entries" ng-click="entrySelected(entry)" >
+				<img class="listitem-logo" ng-src="images/{{entry.type}}.png"/>
+				<span class="listitem-header">{{entry.description}}</span>
+				<span class="listitem-text">{{entry.amount}} {{entry.frequency}}</span>            	
+            </li>
+            <li class="listitem" ng-click="newEntry(entry)" >
+				<img class="listitem-logo" ng-src="images/add.png"/>           	
+            </li>
+        </ul>
+	</div>
+	
+	<div class="well well-lg entry-details" ng-show="currentEntry">
+		<button class="btn btn-default entry-delete-button" ng-click="removeEntry()"><span class="glyphicon glyphicon-trash"></span></button>
+		<button class="btn btn-default entry-save-button" ng-click="saveEntry()"><span class="glyphicon glyphicon-floppy-disk"></span></button>		
+		<div class="type-dropdown">
+			<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+				<img ng-src="images/{{currentEntry.type}}.png"/>
+			</button>
+			<ul class="dropdown-menu">
+				<li  ng:repeat="type in entryTypes()" ng-click="entryTypeChanged(type)" class="languageselector-listitem">
+					<img ng-src="images/{{type}}.png"/>
+					<span>{{entryTypeString(type)}}</span>
+				</li>
+			</ul>
+		</div>
+		<form role="form" class="no-margin">
+   
+			<input type="text" class="form-control description-input" id="description" ng-model="currentEntry.description">
+
+			<div class="form-group">
+				<label for="amount">Amount</label>
+				<input type="text" class="form-control" id="amount" ng-model="currentEntry.amount">
+			</div>
+			<div class="form-group">
+				<label for="frequency">Frequency</label>
+				<select  class="frequency-dropdown form-control" ng-model="currentEntry.frequency" ng-options="frequencyString(obj) for obj in frequencies" ></select>
+			</div>
+		</form>
+	</div>
+</div>

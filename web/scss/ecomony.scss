@@ -1,0 +1,27 @@
+////////////// Import ecomony less /////////////////
+@import "responsive";
+@import "common";
+@import "navigation";
+@import "administration";
+@import "budget";
+
+///////////////// Import fonts /////////////////////
+@font-face {
+font-family: delicious;
+src: url("fonts/Delicious-SmallCaps.otf") format("opentype");
+}
+@font-face {
+font-family: cabin;
+src: url("fonts/Cabin-Regular.otf") format("opentype");
+}
+
+/* GENERATING COLLOR PALETTE WITH SASS
+$base : #633;
+$compliment1: ajust-hue($base, 180);
+$compliment2: darken(ajust-hue($base, 180), 5%));
+$lighten1: lighten($base, 15%);
+$lighten2: lighten($base, 30%);
+*/
+
+
+

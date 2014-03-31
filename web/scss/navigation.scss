@@ -1,0 +1,122 @@
+/******************
+ *** NAVIGATION ***
+ ******************/
+ 
+/*** VARIABLES ***/
+$navbar-height: 50;
+
+
+/*** STYLING ***/
+.navbar-default {
+ 
+ 	border: none;
+	background: #223745;
+	box-shadow: 0 1px 10px rgba(0,0,0,0.5);
+	z-index: 3000;
+
+	
+	//Navigation elements
+	.navigation-elements {
+		position: absolute;
+		width: 100%;
+		background: #223745;
+		@include respond-to(handhelds) {
+			top: $navbar-height;
+			position: absolute;
+		}
+		@include respond-to(tablets) {
+			top: 0px;
+			position: relative;
+		}
+		@include respond-to(wide-screens) {
+			top: 0px;
+			position: relative;
+		}
+	}
+	
+	.hide-navigation {
+		@include respond-to(handhelds) {
+			display:none
+		}
+	}
+	
+	//Navigation toggle button
+	.navbar-toggle {
+		position: relative;
+		float: right;
+		padding: 9px 10px;
+		margin-top: 8px;
+		margin-right: 15px;
+		margin-bottom: 8px;
+		background-color: transparent;
+		background-image: none;
+		border: 1px solid transparent;
+		border-radius: 4px;
+	}
+ 
+	 .navbar-nav {
+		margin: 0;
+		
+		li {
+			a {
+				color: #CFCFCF;
+				font-weight: normal;
+				font-family: cabin;
+				&:hover, &:focus {
+					color: #FFF5EF;
+					background-color: transparent;
+					&:first-letter
+					{
+						color:orange;
+					}
+				}
+			}
+		}
+		.active {
+			 a, a:hover, a:focus {
+				&:first-letter
+				{
+					color:orange;
+				}
+				
+				color: #FFF5EF;
+				background: #1A1D26;
+			}
+		}
+	}
+}
+
+.page-title {
+	font-family: cabin;
+	color: white;
+	font-weight: lighter;
+	font-size: 24;
+	margin-left: 180px;
+	margin-top: 6px;
+	
+	@include respond-to(handhelds) {
+		display: inherit;
+	}
+	@include respond-to(tablets) {
+		display: none;
+	}
+	@include respond-to(wide-screens) {
+		display: none;
+	}
+}
+
+.application-logo { 
+	height:  $navbar-height * 0.8;
+	@include vertical-align;
+	position: absolute;
+	
+	@include respond-to(handhelds) {
+		left: 15px;
+	}
+	@include respond-to(tablets) {
+		right: 10px;
+	}
+	@include respond-to(wide-screens) {
+		right: 15px;
+	}
+}

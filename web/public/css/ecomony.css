@@ -1,0 +1,236 @@
+/*https://kuler.adobe.com/Ahoy-color-theme-3474012/*/
+/*#1B5771*/
+/*
+ * Native styling
+ */
+body {
+  background-image: url("../images/background2.png");
+  background-size: cover;
+  width: 100%;
+  padding: 0px; }
+
+label {
+  color: #A6011E; }
+
+/*
+ * Generic
+ */
+/******************
+ *** NAVIGATION ***
+ ******************/
+/*** VARIABLES ***/
+/*** STYLING ***/
+.navbar-default {
+  border: none;
+  background: #223745;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.5);
+  z-index: 3000; }
+  .navbar-default .navigation-elements {
+    position: absolute;
+    width: 100%;
+    background: #223745; }
+    @media only screen and (max-width: 767px) {
+      .navbar-default .navigation-elements {
+        top: 50;
+        position: absolute; } }
+    @media only screen and (min-width: 768px) and (max-width: 979px) {
+      .navbar-default .navigation-elements {
+        top: 0px;
+        position: relative; } }
+    @media only screen and (min-width: 980px) {
+      .navbar-default .navigation-elements {
+        top: 0px;
+        position: relative; } }
+  @media only screen and (max-width: 767px) {
+    .navbar-default .hide-navigation {
+      display: none; } }
+  .navbar-default .navbar-toggle {
+    position: relative;
+    float: right;
+    padding: 9px 10px;
+    margin-top: 8px;
+    margin-right: 15px;
+    margin-bottom: 8px;
+    background-color: transparent;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px; }
+  .navbar-default .navbar-nav {
+    margin: 0; }
+    .navbar-default .navbar-nav li a {
+      color: #CFCFCF;
+      font-weight: normal;
+      font-family: cabin; }
+      .navbar-default .navbar-nav li a:hover, .navbar-default .navbar-nav li a:focus {
+        color: #FFF5EF;
+        background-color: transparent; }
+        .navbar-default .navbar-nav li a:hover:first-letter, .navbar-default .navbar-nav li a:focus:first-letter {
+          color: orange; }
+    .navbar-default .navbar-nav .active a, .navbar-default .navbar-nav .active a:hover, .navbar-default .navbar-nav .active a:focus {
+      color: #FFF5EF;
+      background: #1A1D26; }
+      .navbar-default .navbar-nav .active a:first-letter, .navbar-default .navbar-nav .active a:hover:first-letter, .navbar-default .navbar-nav .active a:focus:first-letter {
+        color: orange; }
+
+.page-title {
+  font-family: cabin;
+  color: white;
+  font-weight: lighter;
+  font-size: 24;
+  margin-left: 180px;
+  margin-top: 6px; }
+  @media only screen and (max-width: 767px) {
+    .page-title {
+      display: inherit; } }
+  @media only screen and (min-width: 768px) and (max-width: 979px) {
+    .page-title {
+      display: none; } }
+  @media only screen and (min-width: 980px) {
+    .page-title {
+      display: none; } }
+
+.application-logo {
+  height: 40;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  position: absolute; }
+  @media only screen and (max-width: 767px) {
+    .application-logo {
+      left: 15px; } }
+  @media only screen and (min-width: 768px) and (max-width: 979px) {
+    .application-logo {
+      right: 10px; } }
+  @media only screen and (min-width: 980px) {
+    .application-logo {
+      right: 15px; } }
+
+/**********************
+ *** ADMINISTRATION ***
+ **********************/
+/*
+* List styling
+*/
+.entry-list {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 1000;
+  display: block;
+  padding: 70px 20px 20px;
+  background-color: rgba(249, 249, 249, 0.4) !important;
+  border: 0 !important;
+  width: 300px; }
+  .entry-list .list {
+    list-style-type: none;
+    padding: 0; }
+  @media only screen and (max-width: 767px) {
+    .entry-list {
+      width: 90px; } }
+
+.listitem {
+  height: 50;
+  margin-bottom: 0.5em;
+  cursor: pointer; }
+  .listitem:hover {
+    background-color: rgba(255, 255, 255, 0.5); }
+  .listitem .listitem-logo {
+    height: 50;
+    float: left; }
+  .listitem .listitem-header {
+    font-weight: bold;
+    font-size: large;
+    padding-left: 10px;
+    color: #223745;
+    overflow: hidden;
+    white-space: nowrap;
+    display: block; }
+    @media only screen and (max-width: 767px) {
+      .listitem .listitem-header {
+        display: none; } }
+  .listitem .listitem-text {
+    padding-left: 10px;
+    overflow: hidden;
+    white-space: nowrap;
+    display: block; }
+    @media only screen and (max-width: 767px) {
+      .listitem .listitem-text {
+        display: none; } }
+
+/*
+ * Details styling
+ */
+.entry-details {
+  right: 0;
+  left: 300px;
+  margin: 0em 1em;
+  position: absolute;
+  padding: 3em;
+  background-color: rgba(249, 249, 249, 0.8) !important; }
+  @media only screen and (max-width: 767px) {
+    .entry-details {
+      left: 90px; } }
+
+.details-logo {
+  height: 4em;
+  float: left;
+  position: absolute; }
+
+.description-input {
+  width: 50%;
+  zoom: 1.7;
+  color: #A6011E;
+  margin-left: 3em;
+  margin-bottom: 1em; }
+
+.type-dropdown {
+  position: absolute; }
+  .type-dropdown ul li {
+    cursor: pointer; }
+    .type-dropdown ul li img {
+      height: 3.3em;
+      margin: 0.2em 0.4em; }
+    .type-dropdown ul li span {
+      cursor: pointer;
+      font-size: large; }
+  .type-dropdown button {
+    float: left;
+    padding: 0; }
+    .type-dropdown button img {
+      height: 4em; }
+
+.entry-delete-button {
+  background: transparent;
+  border: 0;
+  top: 5px;
+  right: 40px;
+  position: absolute;
+  zoom: 1.5; }
+
+.entry-save-button {
+  background: transparent;
+  border: 0;
+  top: 5px;
+  right: 5px;
+  position: absolute;
+  zoom: 1.5; }
+
+.frequency-dropdown {
+  -webkit-appearance: none; }
+
+@font-face {
+  font-family: delicious;
+  src: url("fonts/Delicious-SmallCaps.otf") format("opentype"); }
+@font-face {
+  font-family: cabin;
+  src: url("fonts/Cabin-Regular.otf") format("opentype"); }
+/* GENERATING COLLOR PALETTE WITH SASS
+$base : #633;
+$compliment1: ajust-hue($base, 180);
+$compliment2: darken(ajust-hue($base, 180), 5%));
+$lighten1: lighten($base, 15%);
+$lighten2: lighten($base, 30%);
+*/
